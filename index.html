@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEJASH HOSPITAL | Expert Healthcare With A Personal Touch - Jijiga</title>
-    
+
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
     <script>
         tailwind.config = {
             theme: {
@@ -34,10 +35,11 @@
     <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Three.js for 3D Background Particles -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
+    </script>
+
     <style>
         .glass-card {
             background: rgba(255, 255, 255, 0.9);
@@ -53,230 +55,398 @@
             pointer-events: none;
             z-index: 2;
         }
-        .chat-scroll::-webkit-scrollbar { width: 6px; }
-        .chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+        .chat-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
 
-        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .reveal-left.active { opacity: 1; transform: translateX(0); }
-        .reveal-right { opacity: 0; transform: translateX(60px); transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .reveal-right.active { opacity: 1; transform: translateX(0); }
-        .reveal-scale { opacity: 0; transform: scale(0.85); transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .reveal-scale.active { opacity: 1; transform: scale(1); }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
 
-        .typing-cursor { display: inline-block; width: 3px; height: 1em; background: currentColor; margin-left: 2px; animation: cursorBlink 0.8s step-end infinite; }
-        @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background: currentColor;
+            margin-left: 2px;
+            animation: cursorBlink 0.8s step-end infinite;
+        }
+        @keyframes cursorBlink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
 
         #back-to-top {
-            position: fixed; bottom: 100px; right: 24px; z-index: 999;
-            width: 48px; height: 48px; border-radius: 50%;
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             background: linear-gradient(135deg, #0284c7, #0ea5e9);
-            color: white; border: none; box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
-            cursor: pointer; font-size: 20px;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.8);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
+            cursor: pointer;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        #back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
-        #back-to-top:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 8px 30px rgba(2, 132, 199, 0.5); }
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+        #back-to-top:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(2, 132, 199, 0.5);
+        }
 
         .floating-actions {
-            position: fixed; bottom: 100px; right: 24px; z-index: 998;
-            display: flex; flex-direction: column; gap: 12px;
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
         .floating-actions a {
-            width: 52px; height: 52px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 22px; color: white; text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .floating-actions a:hover { transform: scale(1.12) translateY(-3px); }
-        .floating-actions .whatsapp { background: #25D366; }
-        .floating-actions .phone { background: #0284c7; }
-        .floating-actions .whatsapp:hover { box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4); }
-        .floating-actions .phone:hover { box-shadow: 0 6px 25px rgba(2, 132, 199, 0.4); }
+        .floating-actions a:hover {
+            transform: scale(1.12) translateY(-3px);
+        }
+        .floating-actions .whatsapp {
+            background: #25D366;
+        }
+        .floating-actions .phone {
+            background: #0284c7;
+        }
+        .floating-actions .whatsapp:hover {
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        .floating-actions .phone:hover {
+            box-shadow: 0 6px 25px rgba(2, 132, 199, 0.4);
+        }
 
-        .page-transition { animation: pageFadeIn 0.6s ease-out forwards; }
-        @keyframes pageFadeIn { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+        /* UPDATED: removed transform from pageFadeIn to prevent creating a new containing block for fixed elements */
+        .page-transition {
+            animation: pageFadeIn 0.6s ease-out forwards;
+        }
+        @keyframes pageFadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
-        .stat-number { font-size: 2.5rem; font-weight: 800; color: #0284c7; display: inline-block; }
-        .stat-label { display: block; font-size: 0.9rem; color: #64748b; font-weight: 500; margin-top: 4px; }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0284c7;
+            display: inline-block;
+        }
+        .stat-label {
+            display: block;
+            font-size: 0.9rem;
+            color: #64748b;
+            font-weight: 500;
+            margin-top: 4px;
+        }
 
-        .dropdown-menu { opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease; }
-        .group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0px); }
-        .dropdown-item { transition: background 0.15s ease, color 0.15s ease; }
-        .mobile-submenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .mobile-submenu.open { max-height: 500px; }
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        }
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+        .dropdown-item {
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+        .mobile-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-submenu.open {
+            max-height: 500px;
+        }
 
         /* ===== MODAL – ALWAYS CENTERED ===== */
         #booking-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-#booking-modal.show {
-    display: flex;
-}
-#booking-modal .modal-inner {
-    position: relative;
-    background: white;
-    border-radius: 24px;
-    max-width: 480px;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 32px 28px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
-    animation: fadeIn 0.3s ease-out forwards;
-    -webkit-overflow-scrolling: touch;
-}
-#booking-modal .modal-close {
-    position: sticky;
-    top: 0;
-    float: right;
-    font-size: 24px;
-    color: #94a3b8;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 4px 4px 4px 12px;
-    z-index: 10;
-    transition: color 0.2s;
-}
-#booking-modal .modal-close:hover {
-    color: #1e293b;
-}
-@media (max-width: 480px) {
-    #booking-modal .modal-inner {
-        padding: 24px 16px;
-        max-height: 90vh;
-    }
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #booking-modal.show {
+            display: flex;
+        }
+        #booking-modal .modal-inner {
+            position: relative;
+            background: white;
+            border-radius: 24px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 32px 28px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.3s ease-out forwards;
+            -webkit-overflow-scrolling: touch;
+        }
+        #booking-modal .modal-close {
+            position: sticky;
+            top: 0;
+            float: right;
+            font-size: 24px;
+            color: #94a3b8;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px 4px 4px 12px;
+            z-index: 10;
+            transition: color 0.2s;
+        }
+        #booking-modal .modal-close:hover {
+            color: #1e293b;
+        }
+        @media (max-width: 480px) {
+            #booking-modal .modal-inner {
+                padding: 24px 16px;
+                max-height: 90vh;
+            }
+        }
 
         /* ===== AI CHAT – BOTTOM-RIGHT ===== */
         #ai-chat-window {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    z-index: 9998;
-    width: 360px;
-    max-width: calc(100vw - 40px);
-    max-height: 65vh;
-    background: white;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-    border: 1px solid #e2e8f0;
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    animation: fadeIn 0.3s ease-out forwards;
-}
-#ai-chat-window.show {
-    display: flex;
-}
-@media (max-width: 480px) {
-    #ai-chat-window {
-        right: 10px;
-        width: calc(100vw - 20px);
-        max-height: 60vh;
-        bottom: 72px;
-    }
-}
-#ai-chat-window .chat-header {
-    background: linear-gradient(to right, #0f172a, #0284c7);
-    color: white;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-}
-#ai-chat-window .chat-body {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-    background: #f8fafc;
-    min-height: 200px;
-}
-#ai-chat-window .chat-footer {
-    padding: 10px 14px;
-    background: white;
-    border-top: 1px solid #e2e8f0;
-    display: flex;
-    gap: 8px;
-    flex-shrink: 0;
-}
-#ai-chat-window .chat-footer input {
-    flex: 1;
-    padding: 10px 14px;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    font-size: 14px;
-    outline: none;
-}
-#ai-chat-window .chat-footer input:focus {
-    border-color: #0284c7;
-}
-#ai-chat-window .chat-footer button {
-    background: #0284c7;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-#ai-chat-window .chat-footer button:hover {
-    background: #0ea5e9;
-}
-
-        #chat-toggle-btn {
-            position: fixed; bottom: 24px; right: 24px; z-index: 9997;
-            width: 56px; height: 56px; border-radius: 50%;
-            background: linear-gradient(135deg, #0284c7, #0ea5e9);
-            color: white; border: none;
-            box-shadow: 0 8px 30px rgba(2, 132, 199, 0.4);
-            font-size: 24px; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        #chat-toggle-btn:hover { transform: scale(1.08); box-shadow: 0 12px 40px rgba(2, 132, 199, 0.5); }
-
-        .quick-prompt {
-            background: white; border: 1px solid #e2e8f0;
-            padding: 4px 12px; border-radius: 9999px;
-            font-size: 11px; color: #334155; cursor: pointer;
-            white-space: nowrap; transition: background 0.2s; flex-shrink: 0;
-        }
-        .quick-prompt:hover { background: #f1f5f9; }
-
-        #toast-notification {
-            position: fixed; bottom: 24px; left: 24px; z-index: 99999;
-            background: #0f172a; color: white; padding: 16px 24px;
-            border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            display: none; align-items: center; gap: 12px;
-            border: 1px solid #334155; max-width: 90vw;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9998;
+            width: 360px;
+            max-width: calc(100vw - 40px);
+            max-height: 65vh;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid #e2e8f0;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
             animation: fadeIn 0.3s ease-out forwards;
         }
-        #toast-notification.show { display: flex; }
+        #ai-chat-window.show {
+            display: flex;
+        }
+        @media (max-width: 480px) {
+            #ai-chat-window {
+                right: 10px;
+                width: calc(100vw - 20px);
+                max-height: 60vh;
+                bottom: 72px;
+            }
+        }
+        #ai-chat-window .chat-header {
+            background: linear-gradient(to right, #0f172a, #0284c7);
+            color: white;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        #ai-chat-window .chat-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            background: #f8fafc;
+            min-height: 200px;
+        }
+        #ai-chat-window .chat-footer {
+            padding: 10px 14px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        #ai-chat-window .chat-footer input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        #ai-chat-window .chat-footer input:focus {
+            border-color: #0284c7;
+        }
+        #ai-chat-window .chat-footer button {
+            background: #0284c7;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #ai-chat-window .chat-footer button:hover {
+            background: #0ea5e9;
+        }
+
+        #chat-toggle-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9997;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0284c7, #0ea5e9);
+            color: white;
+            border: none;
+            box-shadow: 0 8px 30px rgba(2, 132, 199, 0.4);
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        #chat-toggle-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 40px rgba(2, 132, 199, 0.5);
+        }
+
+        .quick-prompt {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 11px;
+            color: #334155;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .quick-prompt:hover {
+            background: #f1f5f9;
+        }
+
+        #toast-notification {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 99999;
+            background: #0f172a;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #334155;
+            max-width: 90vw;
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        #toast-notification.show {
+            display: flex;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden page-transition">
@@ -287,7 +457,7 @@
             <div class="flex items-center space-x-6">
                 <span class="flex items-center"><i class="fa-solid fa-phone-volume text-emerald-400 mr-2 animate-pulse"></i> <span data-i18n="emergency_label">Emergency</span>: <strong class="text-white ml-1 font-mono tracking-wide">+2519000000</strong></span>
                 <span class="hidden md:flex items-center">
-                    <i class="fa-solid fa-location-dot text-medical-primary mr-2"></i> 
+                    <i class="fa-solid fa-location-dot text-medical-primary mr-2"></i>
                     <a href="https://maps.app.goo.gl/vHyugqwpYupU2uv6A" target="_blank" class="text-slate-300 hover:text-white underline decoration-medical-primary decoration-2 transition">Jigjiga Map Location</a>
                 </span>
             </div>
@@ -312,7 +482,7 @@
                     <span class="block text-[10px] uppercase tracking-widest text-slate-500 font-semibold" data-i18n="tagline">Private Medical Center</span>
                 </div>
             </div>
-            
+
             <nav class="hidden lg:flex items-center space-x-6 font-medium text-sm text-slate-600">
                 <a href="index.html" class="text-medical-primary font-semibold transition hover:text-medical-primary" data-i18n="nav_home">Home</a>
                 <div class="relative group">
@@ -1105,90 +1275,214 @@
         // ============================================================
         const translations = {
             en: {
-                emergency_label: "Emergency", hours_label: "Open 24/7 Emergency & Inpatient", tagline: "Private Medical Center",
-                nav_home: "Home", nav_doctors: "Specialists", nav_services: "Services", nav_gallery: "Gallery", nav_story: "Our Story",
-                nav_patient_info: "Patient Info", nav_contact: "Contact", ai_assistant_btn: "AI Assistant", book_btn: "Book Appointment",
-                hero_badge: "Jigjiga's Leading Private Healthcare Clinic", hero_desc: "Your Health Is Our Priority. With experienced specialists, modern diagnostic technology, and patient-centered treatment tailored for your family's well-being at NEJASH HOSPITAL in Jijiga.",
-                book_appointment_cta: "Book An Appointment", whatsapp_cta: "Chat on WhatsApp", welcome_mesh: "Welcome to NEJASH HOSPITAL",
-                call_us_now: "Call Us Now", whatsapp_chat: "WhatsApp Support", expert_team: "Expert Medical Team",
-                specialists_heading: "Meet Our Dedicated Specialists", specialists_sub: "Consult with senior physicians and specialists committed to your health and rapid recovery.",
-                book_consultation: "Book Consultation", book_appointment_card: "Book Appointment",
-                doc_spec_1: "General Practitioner", doc_spec_2: "Internal Medicine", doc_spec_3: "Pediatrics", doc_spec_4: "Surgery",
-                clinical_services: "Clinical Services", services_heading: "Our Departments",
-                serv_1_title: "General Medicine & Consultations", serv_1_desc: "Primary health evaluations, chronic illness management, routine wellness checks, and preventive care.",
-                serv_2_title: "Diagnostics & Laboratory", serv_2_desc: "High-precision digital lab testing, blood analysis, ultrasound diagnostics, and rapid screening.",
-                serv_3_title: "Pediatrics & Maternal Care", serv_3_desc: "Dedicated infant care, vaccination programs, prenatal support, and family health guidance.",
-                learn_more: "Learn More", patient_trust: "Patient Trust", testimonials_heading: "What Our Patients Say",
+                emergency_label: "Emergency",
+                hours_label: "Open 24/7 Emergency & Inpatient",
+                tagline: "Private Medical Center",
+                nav_home: "Home",
+                nav_doctors: "Specialists",
+                nav_services: "Services",
+                nav_gallery: "Gallery",
+                nav_story: "Our Story",
+                nav_patient_info: "Patient Info",
+                nav_contact: "Contact",
+                ai_assistant_btn: "AI Assistant",
+                book_btn: "Book Appointment",
+                hero_badge: "Jigjiga's Leading Private Healthcare Clinic",
+                hero_desc: "Your Health Is Our Priority. With experienced specialists, modern diagnostic technology, and patient-centered treatment tailored for your family's well-being at NEJASH HOSPITAL in Jijiga.",
+                book_appointment_cta: "Book An Appointment",
+                whatsapp_cta: "Chat on WhatsApp",
+                welcome_mesh: "Welcome to NEJASH HOSPITAL",
+                call_us_now: "Call Us Now",
+                whatsapp_chat: "WhatsApp Support",
+                expert_team: "Expert Medical Team",
+                specialists_heading: "Meet Our Dedicated Specialists",
+                specialists_sub: "Consult with senior physicians and specialists committed to your health and rapid recovery.",
+                book_consultation: "Book Consultation",
+                book_appointment_card: "Book Appointment",
+                doc_spec_1: "General Practitioner",
+                doc_spec_2: "Internal Medicine",
+                doc_spec_3: "Pediatrics",
+                doc_spec_4: "Surgery",
+                clinical_services: "Clinical Services",
+                services_heading: "Our Departments",
+                serv_1_title: "General Medicine & Consultations",
+                serv_1_desc: "Primary health evaluations, chronic illness management, routine wellness checks, and preventive care.",
+                serv_2_title: "Diagnostics & Laboratory",
+                serv_2_desc: "High-precision digital lab testing, blood analysis, ultrasound diagnostics, and rapid screening.",
+                serv_3_title: "Pediatrics & Maternal Care",
+                serv_3_desc: "Dedicated infant care, vaccination programs, prenatal support, and family health guidance.",
+                learn_more: "Learn More",
+                patient_trust: "Patient Trust",
+                testimonials_heading: "What Our Patients Say",
                 testimonials_sub: "Real feedback from patients who received exceptional care at NEJASH HOSPITAL.",
                 test_1: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                jigjiga_resident: "Jigjiga Resident", test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                local_patient: "Local Patient", test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                community_member: "Community Member", our_story_badge: "Our Story", story_heading: "Building Trust & Quality Healthcare in Jijiga",
+                jigjiga_resident: "Jigjiga Resident",
+                test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                local_patient: "Local Patient",
+                test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                community_member: "Community Member",
+                our_story_badge: "Our Story",
+                story_heading: "Building Trust & Quality Healthcare in Jijiga",
                 story_desc: "At NEJASH HOSPITAL, our journey began with a simple vision: to provide accessible, high-standard private medical care with genuine human compassion. Watch our story to learn more about our commitment to the community.",
-                book_now: "Book Appointment", whatsapp_us: "WhatsApp Us", video_caption: "NEJASH HOSPITAL Introduction & Facility Overview",
+                book_now: "Book Appointment",
+                whatsapp_us: "WhatsApp Us",
+                video_caption: "NEJASH HOSPITAL Introduction & Facility Overview",
                 footer_desc: "NEJASH HOSPITAL provides dedicated healthcare services with expert physicians, advanced diagnostic support, and compassionate patient care in Jijiga.",
-                footer_quick_links: "Quick Links", footer_departments: "Departments", footer_contact: "Contact Us",
-                privacy_policy: "Privacy Policy", terms_service: "Terms of Service",
-                book_modal_title: "Book Your Appointment", book_modal_sub: "Fill in your details to secure a consultation at NEJASH HOSPITAL.",
-                label_fullname: "Full Name", label_phone: "Phone Number", label_dept: "Department", label_date: "Preferred Date", label_time: "Preferred Time",
-                confirm_booking_btn: "Confirm Appointment Request", toast_title: "Appointment Requested!", toast_sub: "We will call +2519000000 shortly to confirm."
+                footer_quick_links: "Quick Links",
+                footer_departments: "Departments",
+                footer_contact: "Contact Us",
+                privacy_policy: "Privacy Policy",
+                terms_service: "Terms of Service",
+                book_modal_title: "Book Your Appointment",
+                book_modal_sub: "Fill in your details to secure a consultation at NEJASH HOSPITAL.",
+                label_fullname: "Full Name",
+                label_phone: "Phone Number",
+                label_dept: "Department",
+                label_date: "Preferred Date",
+                label_time: "Preferred Time",
+                confirm_booking_btn: "Confirm Appointment Request",
+                toast_title: "Appointment Requested!",
+                toast_sub: "We will call +2519000000 shortly to confirm."
             },
             am: {
-                emergency_label: "ድንገተኛ አደጋ", hours_label: "24/7 የድንገተኛ እና ህሙማን ማቆያ ክፍት ነው", tagline: "ግል የህክምና ማዕከል",
-                nav_home: "መነሻ", nav_doctors: "ባለሙያዎች", nav_services: "አገልግሎቶች", nav_gallery: "ፎቶዎች", nav_story: "ታሪካችን",
-                nav_patient_info: "የታካሚ መረጃ", nav_contact: "አግኙን", ai_assistant_btn: "የAI ረዳት", book_btn: "ቀጠሮ ይያዙ",
-                hero_badge: "የጅጅጋ መሪ የግል ህክምና ክሊኒክ", hero_desc: "የእርስዎ ጤና ቅድሚያችን ነው! NEJASH HOSPITAL በጅጅጋ ከተማ ልምድ ያላቸው ሃኪሞች እና ዘመናዊ የላብራቶሪ መሣሪያዎች በአንድ ላይ ተሟልተዋል።",
-                book_appointment_cta: "ቀጠሮ ይያዙ", whatsapp_cta: "በዋትስአፕ ያነጋገሩን", welcome_mesh: "ወደ NEJASH HOSPITAL እንኳን በደህና መጡ",
-                call_us_now: "አሁን ይደውሉልን", whatsapp_chat: "የዋትስአፕ ድጋፍ", expert_team: "የህክምና ባለሙያዎች",
-                specialists_heading: "የእኛ ልዩ ባለሙያተኞች", specialists_sub: "ለጤናዎ እና ፈጣን ማገገምዎ ቁርጠኛ ከሆኑ ሃኪሞች ጋር ያማክሩ።",
-                book_consultation: "ምክክር መርሐግብር", book_appointment_card: "ቀጠሮ ይያዙ",
-                doc_spec_1: "አጠቃላይ ሃኪም", doc_spec_2: "የውስጥ ደዌ ባለሙያ", doc_spec_3: "የህፃናት እና ቤተሰብ ጤና", doc_spec_4: "ቀዶ ጥገና ባለሙያ",
-                clinical_services: "ክሊኒካዊ አገልግሎቶች", services_heading: "የእኛ ክፍሎች",
-                serv_1_title: "አጠቃላይ ሕክምና እና ምክክር", serv_1_desc: "የመጀመሪያ ደረጃ የጤና ምርመራዎች እና የሥር የሰደዱ በሽታዎች ክትትል።",
-                serv_2_title: "ምርመራ እና ላብራቶሪ", serv_2_desc: "ከፍተኛ ጥራት ያለው የዲጂታል ላብራቶሪ ምርመራ እና የደም ምርመራ።",
-                serv_3_title: "የህፃናት እና እናቶች ጤና", serv_3_desc: "ልዩ የህፃናት እንክብካቤ፣ ክትባት እና የእርግዝና ክትትል ድጋፍ።",
-                learn_more: "ተጨማሪ ይወቁ", patient_trust: "የታካሚዎች እምነት", testimonials_heading: "ታካሚዎቻችን ምን ይላሉ?",
+                emergency_label: "ድንገተኛ አደጋ",
+                hours_label: "24/7 የድንገተኛ እና ህሙማን ማቆያ ክፍት ነው",
+                tagline: "ግል የህክምና ማዕከል",
+                nav_home: "መነሻ",
+                nav_doctors: "ባለሙያዎች",
+                nav_services: "አገልግሎቶች",
+                nav_gallery: "ፎቶዎች",
+                nav_story: "ታሪካችን",
+                nav_patient_info: "የታካሚ መረጃ",
+                nav_contact: "አግኙን",
+                ai_assistant_btn: "የAI ረዳት",
+                book_btn: "ቀጠሮ ይያዙ",
+                hero_badge: "የጅጅጋ መሪ የግል ህክምና ክሊኒክ",
+                hero_desc: "የእርስዎ ጤና ቅድሚያችን ነው! NEJASH HOSPITAL በጅጅጋ ከተማ ልምድ ያላቸው ሃኪሞች እና ዘመናዊ የላብራቶሪ መሣሪያዎች በአንድ ላይ ተሟልተዋል።",
+                book_appointment_cta: "ቀጠሮ ይያዙ",
+                whatsapp_cta: "በዋትስአፕ ያነጋገሩን",
+                welcome_mesh: "ወደ NEJASH HOSPITAL እንኳን በደህና መጡ",
+                call_us_now: "አሁን ይደውሉልን",
+                whatsapp_chat: "የዋትስአፕ ድጋፍ",
+                expert_team: "የህክምና ባለሙያዎች",
+                specialists_heading: "የእኛ ልዩ ባለሙያተኞች",
+                specialists_sub: "ለጤናዎ እና ፈጣን ማገገምዎ ቁርጠኛ ከሆኑ ሃኪሞች ጋር ያማክሩ።",
+                book_consultation: "ምክክር መርሐግብር",
+                book_appointment_card: "ቀጠሮ ይያዙ",
+                doc_spec_1: "አጠቃላይ ሃኪም",
+                doc_spec_2: "የውስጥ ደዌ ባለሙያ",
+                doc_spec_3: "የህፃናት እና ቤተሰብ ጤና",
+                doc_spec_4: "ቀዶ ጥገና ባለሙያ",
+                clinical_services: "ክሊኒካዊ አገልግሎቶች",
+                services_heading: "የእኛ ክፍሎች",
+                serv_1_title: "አጠቃላይ ሕክምና እና ምክክር",
+                serv_1_desc: "የመጀመሪያ ደረጃ የጤና ምርመራዎች እና የሥር የሰደዱ በሽታዎች ክትትል።",
+                serv_2_title: "ምርመራ እና ላብራቶሪ",
+                serv_2_desc: "ከፍተኛ ጥራት ያለው የዲጂታል ላብራቶሪ ምርመራ እና የደም ምርመራ።",
+                serv_3_title: "የህፃናት እና እናቶች ጤና",
+                serv_3_desc: "ልዩ የህፃናት እንክብካቤ፣ ክትባት እና የእርግዝና ክትትል ድጋፍ።",
+                learn_more: "ተጨማሪ ይወቁ",
+                patient_trust: "የታካሚዎች እምነት",
+                testimonials_heading: "ታካሚዎቻችን ምን ይላሉ?",
                 testimonials_sub: "በNEJASH HOSPITAL ጥራት ያለው ሕክምና ካገኙ ታካሚዎች የተሰጡ አስተያየቶች።",
                 test_1: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                jigjiga_resident: "የጅጅጋ ነዋሪ", test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                local_patient: "የአካባቢ ታካሚ", test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                community_member: "የማህበረሰብ አባል", our_story_badge: "ታሪካችን", story_heading: "በጅጅጋ ጥራት ያለው የህክምና አገልግሎት መስጠት",
+                jigjiga_resident: "የጅጅጋ ነዋሪ",
+                test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                local_patient: "የአካባቢ ታካሚ",
+                test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                community_member: "የማህበረሰብ አባል",
+                our_story_badge: "ታሪካችን",
+                story_heading: "በጅጅጋ ጥራት ያለው የህክምና አገልግሎት መስጠት",
                 story_desc: "በNEJASH HOSPITAL ጉዟችን የጀመረው ተደራሽ እና ከፍተኛ ደረጃ ያለው የግል ህክምና በሰብአዊነት ስሜት ለመስጠት ነው።",
-                book_now: "ቀጠሮ ይያዙ", whatsapp_us: "በዋትስአፕ ያነጋገሩን", video_caption: "የNEJASH HOSPITAL መግቢያ እና የተቋም አጠቃላይ እይታ",
+                book_now: "ቀጠሮ ይያዙ",
+                whatsapp_us: "በዋትስአፕ ያነጋገሩን",
+                video_caption: "የNEJASH HOSPITAL መግቢያ እና የተቋም አጠቃላይ እይታ",
                 footer_desc: "NEJASH HOSPITAL በጅጅጋ ከተማ በባለሙያ ሐኪሞች እና በዘመናዊ የምርመራ ድጋፍ የታገዘ ጥራት ያለው የህክምና አገልግሎት ይሰጣል።",
-                footer_quick_links: "ፈጣን አገናኞች", footer_departments: "ክፍሎች", footer_contact: "አግኙን", privacy_policy: "የግላዊነት ፖሊሲ", terms_service: "የአገልግሎት ውሎች",
-                book_modal_title: "ቀጠሮዎን ይያዙ", book_modal_sub: "በNEJASH HOSPITAL ለመታከም ዝርዝር መረጃዎን ይሙሉ አጭር መረጃ።",
-                label_fullname: "ሙሉ ስም", label_phone: "ስልክ ቁጥር", label_dept: "ክፍል", label_date: "የሚፈልጉት ቀን", label_time: "የሚፈልጉት ሰዓት",
-                confirm_booking_btn: "የቀጠሮ ጥያቄውን ያረጋግጡ", toast_title: "ቀጠሮ ተጠይቋል!", toast_sub: "ለማረጋገጫ በ +2519000000 እንደውልልዎታለን።"
+                footer_quick_links: "ፈጣን አገናኞች",
+                footer_departments: "ክፍሎች",
+                footer_contact: "አግኙን",
+                privacy_policy: "የግላዊነት ፖሊሲ",
+                terms_service: "የአገልግሎት ውሎች",
+                book_modal_title: "ቀጠሮዎን ይያዙ",
+                book_modal_sub: "በNEJASH HOSPITAL ለመታከም ዝርዝር መረጃዎን ይሙሉ አጭር መረጃ።",
+                label_fullname: "ሙሉ ስም",
+                label_phone: "ስልክ ቁጥር",
+                label_dept: "ክፍል",
+                label_date: "የሚፈልጉት ቀን",
+                label_time: "የሚፈልጉት ሰዓት",
+                confirm_booking_btn: "የቀጠሮ ጥያቄውን ያረጋግጡ",
+                toast_title: "ቀጠሮ ተጠይቋል!",
+                toast_sub: "ለማረጋገጫ በ +2519000000 እንደውልልዎታለን።"
             },
             so: {
-                emergency_label: "Degdeg", hours_label: "Furan 24/7 Adeegga Degdga & Jiifka", tagline: "Xarun Caafimaad oo Gaar loo leeyahay",
-                nav_home: "Bogga Hore", nav_doctors: "Takhasusyada", nav_services: "Adeegyada", nav_gallery: "Sawirada", nav_story: "Sheekadeena",
-                nav_patient_info: "Macluumaadka Bukaanka", nav_contact: "Nala Soo Xiriir", ai_assistant_btn: "Kaaliyaha AI", book_btn: "Ballansato",
-                hero_badge: "Xarunta Caafimaad ee Hormuudka ka ah Jigjiga", hero_desc: "Daryeelka caafimaadkaaga ayaa ah mudnaantayada. NEJASH HOSPITAL waxay bixisaa daryeel caafimaad oo lagu kalsoonaan karo iyadoo ay joogaan dhakhaatiir khibrad leh, tignoolajiyad casri ah, iyo daryeel qoyskaaga ku habboon.",
-                book_appointment_cta: "Ballan Qabso", whatsapp_cta: "Nagala Hadal WhatsApp", welcome_mesh: "Ku soo dhowow NEJASH HOSPITAL",
-                call_us_now: "Na Soo Wac Hadda", whatsapp_chat: "Taageerada WhatsApp", expert_team: "Kooxda Caafimaadka",
-                specialists_heading: "La Kulanto Dhakhaatiirteena Takhasuska Leh", specialists_sub: "La tasho dhakhaatiir sare oo u heellan caafimaadkaaga iyo bogsashadaada degdeg ah.",
-                book_consultation: "Ballansato La-tashi", book_appointment_card: "Ballan Qabso",
-                doc_spec_1: "Dhakhtarka Guud", doc_spec_2: "Takhasusaha Cudurada Gudaha", doc_spec_3: "Cilmiga Carruurta & Qoyska", doc_spec_4: "Qalliinka & Lafaha",
-                clinical_services: "Adeegyada Caafimaadka", services_heading: "Waaxyheena",
-                serv_1_title: "Daawada Guud & La-tashiga", serv_1_desc: "Qiimaynta caafimaadka aasaasiga ah, maaraynta cudurada joogtada ah, iyo daryeelka ka hortagga ah.",
-                serv_2_title: "Baaritaannada & Shaybaarka", serv_2_desc: "Baaritaanno shaybaar oo sax ah, falanqaynta dhiigga, iyo ultrasound.",
-                serv_3_title: "Caafimaadka Carruurta & Hooyada", serv_3_desc: "Daryeelka dhallaanka, barnaamijyada tallaalka, iyo taageerada uurka.",
-                learn_more: "Wax Dheeraad ah Baro", patient_trust: "Kalsoonida Bukaanka", testimonials_heading: "Waxaa Ay Bukaannadeedu Dhaheen",
+                emergency_label: "Degdeg",
+                hours_label: "Furan 24/7 Adeegga Degdga & Jiifka",
+                tagline: "Xarun Caafimaad oo Gaar loo leeyahay",
+                nav_home: "Bogga Hore",
+                nav_doctors: "Takhasusyada",
+                nav_services: "Adeegyada",
+                nav_gallery: "Sawirada",
+                nav_story: "Sheekadeena",
+                nav_patient_info: "Macluumaadka Bukaanka",
+                nav_contact: "Nala Soo Xiriir",
+                ai_assistant_btn: "Kaaliyaha AI",
+                book_btn: "Ballansato",
+                hero_badge: "Xarunta Caafimaad ee Hormuudka ka ah Jigjiga",
+                hero_desc: "Daryeelka caafimaadkaaga ayaa ah mudnaantayada. NEJASH HOSPITAL waxay bixisaa daryeel caafimaad oo lagu kalsoonaan karo iyadoo ay joogaan dhakhaatiir khibrad leh, tignoolajiyad casri ah, iyo daryeel qoyskaaga ku habboon.",
+                book_appointment_cta: "Ballan Qabso",
+                whatsapp_cta: "Nagala Hadal WhatsApp",
+                welcome_mesh: "Ku soo dhowow NEJASH HOSPITAL",
+                call_us_now: "Na Soo Wac Hadda",
+                whatsapp_chat: "Taageerada WhatsApp",
+                expert_team: "Kooxda Caafimaadka",
+                specialists_heading: "La Kulanto Dhakhaatiirteena Takhasuska Leh",
+                specialists_sub: "La tasho dhakhaatiir sare oo u heellan caafimaadkaaga iyo bogsashadaada degdeg ah.",
+                book_consultation: "Ballansato La-tashi",
+                book_appointment_card: "Ballan Qabso",
+                doc_spec_1: "Dhakhtarka Guud",
+                doc_spec_2: "Takhasusaha Cudurada Gudaha",
+                doc_spec_3: "Cilmiga Carruurta & Qoyska",
+                doc_spec_4: "Qalliinka & Lafaha",
+                clinical_services: "Adeegyada Caafimaadka",
+                services_heading: "Waaxyheena",
+                serv_1_title: "Daawada Guud & La-tashiga",
+                serv_1_desc: "Qiimaynta caafimaadka aasaasiga ah, maaraynta cudurada joogtada ah, iyo daryeelka ka hortagga ah.",
+                serv_2_title: "Baaritaannada & Shaybaarka",
+                serv_2_desc: "Baaritaanno shaybaar oo sax ah, falanqaynta dhiigga, iyo ultrasound.",
+                serv_3_title: "Caafimaadka Carruurta & Hooyada",
+                serv_3_desc: "Daryeelka dhallaanka, barnaamijyada tallaalka, iyo taageerada uurka.",
+                learn_more: "Wax Dheeraad ah Baro",
+                patient_trust: "Kalsoonida Bukaanka",
+                testimonials_heading: "Waxaa Ay Bukaannadeedu Dhaheen",
                 testimonials_sub: "Fikradaha dhabta ah ee bukaannada ka helay daryeelka NEJASH HOSPITAL.",
                 test_1: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                jigjiga_resident: "Degganaha Jigjiga", test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                local_patient: "Bukaanka Deegaanka", test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
-                community_member: "Xubin Bulshada ka tirsan", our_story_badge: "Sheekadeena", story_heading: "Dhisidda Kalsoonida & Daryeelka Tayada Leh ee Jigjiga",
+                jigjiga_resident: "Degganaha Jigjiga",
+                test_2: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                local_patient: "Bukaanka Deegaanka",
+                test_3: "\"Deegaan nadiif ah, shaqaale edeb leh, iyo dhakhaatiir aqoon u leh shaqadooda. Mar walba waan ku talinayaa NEJASH HOSPITAL.\"",
+                community_member: "Xubin Bulshada ka tirsan",
+                our_story_badge: "Sheekadeena",
+                story_heading: "Dhisidda Kalsoonida & Daryeelka Tayada Leh ee Jigjiga",
                 story_desc: "NEJASH HOSPITAL waxay ka bilaabatay aragti fudud: in la bixiyo daryeel caafimaad oo tayo sarreeya oo ay weheliso naxariis bani'aadamnimo.",
-                book_now: "Ballan Qabso", whatsapp_us: "Nagala Xiriir WhatsApp", video_caption: "Hordhaca & Dulmarka Xarunta NEJASH HOSPITAL",
+                book_now: "Ballan Qabso",
+                whatsapp_us: "Nagala Xiriir WhatsApp",
+                video_caption: "Hordhaca & Dulmarka Xarunta NEJASH HOSPITAL",
                 footer_desc: "NEJASH HOSPITAL waxay bixisaa adeegyo caafimaad oo heersare ah oo ay weheliyaan dhakhaatiir khibrad leh iyo taageero shaybaar oo Jigjiga ku taalla.",
-                footer_quick_links: "Xiriirinta Degdegga ah", footer_departments: "Waaxyaha", footer_contact: "Nala Soo Xiriir",
-                privacy_policy: "Siyaasadda Khaas ahaanshaha", terms_service: "Shuruudaha Adeegga",
-                book_modal_title: "Ballansato Ballantaada", book_modal_sub: "Buuxi faahfaahintaada si aad ballan uga qabsatid NEJASH HOSPITAL.",
-                label_fullname: "Magaca oo Buuxa", label_phone: "Lambarka Telefoonka", label_dept: "Waaxda", label_date: "Taariikhda la doorbiday", label_time: "Waqtiga la doorbiday",
-                confirm_booking_btn: "Xaqiiji Codsiga Ballanta", toast_title: "Ballan ayaa la Codsaday!", toast_sub: "Waxaanu ku soo wici doonaa +2519000000 si aanu u xaqiijino."
+                footer_quick_links: "Xiriirinta Degdegga ah",
+                footer_departments: "Waaxyaha",
+                footer_contact: "Nala Soo Xiriir",
+                privacy_policy: "Siyaasadda Khaas ahaanshaha",
+                terms_service: "Shuruudaha Adeegga",
+                book_modal_title: "Ballansato Ballantaada",
+                book_modal_sub: "Buuxi faahfaahintaada si aad ballan uga qabsatid NEJASH HOSPITAL.",
+                label_fullname: "Magaca oo Buuxa",
+                label_phone: "Lambarka Telefoonka",
+                label_dept: "Waaxda",
+                label_date: "Taariikhda la doorbiday",
+                label_time: "Waqtiga la doorbiday",
+                confirm_booking_btn: "Xaqiiji Codsiga Ballanta",
+                toast_title: "Ballan ayaa la Codsaday!",
+                toast_sub: "Waxaanu ku soo wici doonaa +2519000000 si aanu u xaqiijino."
             }
         };
 
@@ -1224,7 +1518,9 @@
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
         }
+
         function toggleMobileMenu() { document.getElementById('mobile-menu').classList.add('hidden'); }
+
         function toggleMobileSubmenu(btn) {
             const parent = btn.closest('.mobile-accordion');
             if (!parent) return;
@@ -1241,6 +1537,7 @@
             document.getElementById('booking-modal').classList.add('show');
             document.body.style.overflow = 'hidden';
         }
+
         function closeBookingModal() {
             document.getElementById('booking-modal').classList.remove('show');
             document.body.style.overflow = '';
@@ -1260,6 +1557,7 @@
             closeBookingModal();
             showToast('Appointment Requested!', 'We will call +2519000000 shortly to confirm.');
         }
+
         function openServiceModal(serviceName) {
             openBookingModal();
             const sel = document.getElementById('modal-dept');
@@ -1275,7 +1573,9 @@
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 4500);
         }
+
         function showToastMessage(msg) { showToast('NEJASH HOSPITAL Notice', msg); }
+
         function playVideoPlaceholder() { showToastMessage('Video player loading. You can watch NEJASH HOSPITAL\'s introduction video or call +2519000000!'); }
 
         // ===== SPECIALIST FILTER =====
@@ -1298,32 +1598,46 @@
         function toggleChat() {
             document.getElementById('ai-chat-window').classList.toggle('show');
         }
+
         function handleChatKey(e) { if (e.key === 'Enter') sendChatMessage(); }
-        function sendQuickPrompt(text) { document.getElementById('chat-input').value = text; sendChatMessage(); }
+
+        function sendQuickPrompt(text) { document.getElementById('chat-input').value = text;
+            sendChatMessage(); }
+
         function sendChatMessage() {
             const input = document.getElementById('chat-input');
             const msg = input.value.trim();
             if (!msg) return;
             const container = document.getElementById('chat-messages');
-            container.innerHTML += `<div class="flex items-start justify-end space-x-2"><div class="bg-medical-primary text-white p-3 rounded-2xl rounded-tr-sm text-sm shadow-sm max-w-[85%]">${escapeHtml(msg)}</div></div>`;
+            container.innerHTML +=
+                `<div class="flex items-start justify-end space-x-2"><div class="bg-medical-primary text-white p-3 rounded-2xl rounded-tr-sm text-sm shadow-sm max-w-[85%]">${escapeHtml(msg)}</div></div>`;
             input.value = '';
             container.scrollTop = container.scrollHeight;
             setTimeout(() => {
-                let reply = "Thank you for reaching out to NEJASH HOSPITAL in Jijiga! We are open 24/7 for emergencies. You can reach us directly at +2519000000 or via WhatsApp at +2519000000.";
+                let reply =
+                    "Thank you for reaching out to NEJASH HOSPITAL in Jijiga! We are open 24/7 for emergencies. You can reach us directly at +2519000000 or via WhatsApp at +2519000000.";
                 const lower = msg.toLowerCase();
-                if (lower.includes('appointment') || lower.includes('book') || lower.includes('ቀጠሮ') || lower.includes('ballansato')) {
-                    reply = "You can easily book an appointment by clicking the 'Book Appointment' button at the top of the page or calling us at +2519000000.";
-                } else if (lower.includes('phone') || lower.includes('number') || lower.includes('call') || lower.includes('ስልክ')) {
+                if (lower.includes('appointment') || lower.includes('book') || lower.includes('ቀጠሮ') || lower.includes(
+                        'ballansato')) {
+                    reply =
+                        "You can easily book an appointment by clicking the 'Book Appointment' button at the top of the page or calling us at +2519000000.";
+                } else if (lower.includes('phone') || lower.includes('number') || lower.includes('call') || lower.includes(
+                        'ስልክ')) {
                     reply = "NEJASH HOSPITAL phone number & WhatsApp: +2519000000.";
-                } else if (lower.includes('address') || lower.includes('location') || lower.includes('where') || lower.includes('አድራሻ')) {
-                    reply = "NEJASH HOSPITAL is centrally located in Jijiga. View on Google Maps: https://maps.app.goo.gl/vHyugqwpYupU2uv6A";
-                } else if (lower.includes('hour') || lower.includes('time') || lower.includes('open') || lower.includes('ሰዓት')) {
+                } else if (lower.includes('address') || lower.includes('location') || lower.includes('where') || lower
+                    .includes('አድራሻ')) {
+                    reply =
+                        "NEJASH HOSPITAL is centrally located in Jijiga. View on Google Maps: https://maps.app.goo.gl/vHyugqwpYupU2uv6A";
+                } else if (lower.includes('hour') || lower.includes('time') || lower.includes('open') || lower.includes(
+                        'ሰዓት')) {
                     reply = "NEJASH HOSPITAL emergency & inpatient care is open 24 hours a day, 7 days a week!";
                 }
-                container.innerHTML += `<div class="flex items-start space-x-2"><div class="w-8 h-8 rounded-full bg-medical-primary text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div><div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-sm text-slate-700 text-sm shadow-sm max-w-[85%]">${escapeHtml(reply)}</div></div>`;
+                container.innerHTML +=
+                    `<div class="flex items-start space-x-2"><div class="w-8 h-8 rounded-full bg-medical-primary text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div><div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-sm text-slate-700 text-sm shadow-sm max-w-[85%]">${escapeHtml(reply)}</div></div>`;
                 container.scrollTop = container.scrollHeight;
             }, 700);
         }
+
         function escapeHtml(text) {
             const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
             return text.replace(/[&<>"']/g, m => map[m]);
@@ -1337,6 +1651,7 @@
             const cursor = document.createElement('span');
             cursor.className = 'typing-cursor';
             element.appendChild(cursor);
+
             function type() {
                 if (i < text.length) {
                     const char = text.charAt(i);
@@ -1380,7 +1695,8 @@
                             const increment = Math.ceil(target / 60);
                             const timer = setInterval(() => {
                                 current += increment;
-                                if (current >= target) { current = target; clearInterval(timer); }
+                                if (current >= target) { current = target;
+                                    clearInterval(timer); }
                                 stat.textContent = current + (target > 100 ? '+' : '');
                             }, 30);
                         });
@@ -1447,6 +1763,7 @@
                 scene.add(mesh);
                 camera.position.z = 5;
                 const clock = new THREE.Clock();
+
                 function animate() {
                     requestAnimationFrame(animate);
                     const t = clock.getElapsedTime();
