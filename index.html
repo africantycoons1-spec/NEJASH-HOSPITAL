@@ -1752,61 +1752,28 @@
         }
 
         // ===== HERO SLIDER & THREE.JS =====
-        window.addEventListener('load', () => {
-            const slides = document.querySelectorAll('.hero-bg-slide');
-            if (slides.length > 0) {
-                let idx = 0;
-                setInterval(() => {
-                    slides[idx].classList.remove('opacity-100');
-                    slides[idx].classList.add('opacity-0');
-                    idx = (idx + 1) % slides.length;
-                    slides[idx].classList.remove('opacity-0');
-                    slides[idx].classList.add('opacity-100');
-                }, 5000);
-            }
-            const canvas = document.getElementById('hero-canvas');
-            if (canvas) {
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-                renderer.setSize(window.innerWidth, window.innerHeight);
-                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-                const geo = new THREE.BufferGeometry();
-                const count = 220;
-                const pos = new Float32Array(count * 3);
-                for (let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 16;
-                geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-                const mat = new THREE.PointsMaterial({ size: 0.045, color: 0x38bdf8, transparent: true, opacity: 0.65 });
-                const mesh = new THREE.Points(geo, mat);
-                scene.add(mesh);
-                camera.position.z = 5;
-                const clock = new THREE.Clock();
+window.addEventListener('load', () => {
+    const slides = document.querySelectorAll('.hero-bg-slide');
+    if (slides.length > 0) {
+        let idx = 0;
+        setInterval(() => {
+            slides[idx].classList.remove('opacity-100');
+            slides[idx].classList.add('opacity-0');
+            idx = (idx + 1) % slides.length;
+            slides[idx].classList.remove('opacity-0');
+            slides[idx].classList.add('opacity-100');
+        }, 5000);
+    }
 
-                function animate() {
-                    requestAnimationFrame(animate);
-                    const t = clock.getElapsedTime();
-                    mesh.rotation.y = t * 0.03;
-                    mesh.rotation.x = t * 0.015;
-                    renderer.render(scene, camera);
-                }
-                animate();
-                window.addEventListener('resize', () => {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                });
-            }
-            const typingEl = document.querySelector('.typing-effect');
-            if (typingEl) {
-                const text = typingEl.dataset.text || typingEl.textContent.trim();
-                typingEl.textContent = '';
-                typeText(typingEl, text, 50);
-            }
-            initScrollReveal();
-            initStatsCounter();
-            initBackToTop();
-            initFloatingActions();
-        });
+    // Preload all hero images (this is the new part)
+    document.querySelectorAll('.hero-bg-slide img').forEach(img => {
+        const src = img.getAttribute('src');
+        if (src) {
+            const preload = new Image();
+            preload.src = src;
+        }
+    });
+});
     </script>
 </body>
 </html>
