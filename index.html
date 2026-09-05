@@ -920,84 +920,270 @@
                 <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Abdiihaye</h4>
                 <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
             </div>
-            <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Abdirahman%20Pediatrics%20And%20Child%20Health%20Specialist.png" alt="Dr. Mohamed Abdirahman" class="w-full h-full object-cover"></div>
-                <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Abdirahman</h4>
-                <p class="text-[10px] text-medical-primary font-medium">Pediatrics</p>
+      <!-- ===== EXPERT MEDICAL TEAM ===== -->
+<section id="doctors" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="inline-block bg-medical-primary/10 text-medical-primary font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-3">Our Team</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Expert Medical <span class="text-medical-primary">Specialists</span></h2>
+            <p class="text-slate-600 mt-3 text-sm sm:text-base">Our highly qualified doctors are dedicated to providing exceptional, patient-centered care across multiple specialties.</p>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+            <button data-filter="all" class="filter-btn bg-medical-primary text-white font-semibold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-lg transition">All</button>
+            <button data-filter="internal-medicine" class="filter-btn bg-slate-100 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-slate-200 transition">Internal Medicine</button>
+            <button data-filter="gynecology-obstetrics" class="filter-btn bg-slate-100 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-slate-200 transition">Gynecology & Obstetrics</button>
+            <button data-filter="pediatrics" class="filter-btn bg-slate-100 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-slate-200 transition">Pediatrics</button>
+            <button data-filter="plastic-surgery" class="filter-btn bg-slate-100 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm hover:bg-slate-200 transition">Plastic & Reconstructive Surgery</button>
+        </div>
+
+        <!-- DESKTOP GRID (10 Doctors) -->
+        <div id="specialists-grid" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+            <!-- 1: Dr. Abdishakur Abdirasaq - Gynecology -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="gynecology-obstetrics">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Abdishakur%20Abdirasaq%20Gynecology%20And%20Obsterics%20Specialist.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0284c7/ffffff?text=Dr.+Abdishakur';" alt="Dr. Abdishakur Abdirasaq" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Abdishakur Abdirasaq</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Gynecology & Obstetrics</p>
+                    <p class="text-[10px] text-slate-500">Women's Health</p>
+                </div>
             </div>
-            <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Omar%20Assistant%20Professor%20Of%20Internal%20Medicine.png" alt="Dr. Mohamed Omar" class="w-full h-full object-cover"></div>
-                <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Omar</h4>
-                <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
+
+            <!-- 2: Dr. Ahmed Abdikerin - Pediatrics -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="pediatrics">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Ahmed%20Abdikerin%20Pediatrics%20And%20Child%20Health%20Specialist.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0d9488/ffffff?text=Dr.+Ahmed+Abdikerin';" alt="Dr. Ahmed Abdikerin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Ahmed Abdikerin</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Pediatrics & Child Health</p>
+                    <p class="text-[10px] text-slate-500">Child Health</p>
+                </div>
             </div>
-            <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Solomon%20Wube%20Pediatrics%20And%20Neonatal%20Surgeon.png" alt="Dr. Solomon Wube" class="w-full h-full object-cover"></div>
-                <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Solomon Wube</h4>
-                <p class="text-[10px] text-medical-primary font-medium">Pediatric Surgery</p>
+
+            <!-- 3: Dr. Ahmednasir Abdi - Internal Medicine -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="internal-medicine">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Ahmednasir%20Abdi%20Internal%20Medicine%20Specialist.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0284c7/ffffff?text=Dr.+Ahmednasir';" alt="Dr. Ahmednasir Abdi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Ahmednasir Abdi</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Internal Medicine</p>
+                    <p class="text-[10px] text-slate-500">Chronic Care</p>
+                </div>
             </div>
-            <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs col-span-2">
-                <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Abdifatah%20Tahir%20Internist.jpg" alt="Dr. Abdifatah Tahir" class="w-full h-full object-cover"></div>
-                <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Abdifatah Tahir</h4>
-                <p class="text-[10px] text-medical-primary font-medium">Internist</p>
+
+            <!-- 4: Dr. Fardowsa Abdulahi - Gynecology -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="gynecology-obstetrics">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Fardowsa%20Abdulahi%20Assistant%20Professor%20Of%20Gynecology%20And%20Obsterics.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0d9488/ffffff?text=Dr.+Fardowsa';" alt="Dr. Fardowsa Abdulahi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Fardowsa Abdulahi</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Assistant Professor - Gynecology</p>
+                    <p class="text-[10px] text-slate-500">Women's Health</p>
+                </div>
+            </div>
+
+            <!-- 5: Dr. Girma Moges MD - Plastic Surgery -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="plastic-surgery">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Girma%20Moges%20MD%20Plastic%20And%20Reconstructive%20Surgeon.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0284c7/ffffff?text=Dr.+Girma+Moges';" alt="Dr. Girma Moges" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Girma Moges MD</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Plastic & Reconstructive Surgeon</p>
+                    <p class="text-[10px] text-slate-500">Surgery</p>
+                </div>
+            </div>
+
+            <!-- 6: Dr. Mohamed Abdiihaye - Internal Medicine -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="internal-medicine">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Abdiihaye%20Internal%20Medicine%20Specialist.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0d9488/ffffff?text=Dr.+Mohamed+Abdiihaye';" alt="Dr. Mohamed Abdiihaye" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Mohamed Abdiihaye</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Internal Medicine</p>
+                    <p class="text-[10px] text-slate-500">Chronic Care</p>
+                </div>
+            </div>
+
+            <!-- 7: Dr. Mohamed Abdirahman - Pediatrics -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="pediatrics">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Abdirahman%20Pediatrics%20And%20Child%20Health%20Specialist.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0284c7/ffffff?text=Dr.+Mohamed+Abdirahman';" alt="Dr. Mohamed Abdirahman" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Mohamed Abdirahman</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Pediatrics & Child Health</p>
+                    <p class="text-[10px] text-slate-500">Child Health</p>
+                </div>
+            </div>
+
+            <!-- 8: Dr. Mohamed Omar - Internal Medicine -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="internal-medicine">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Omar%20Assistant%20Professor%20Of%20Internal%20Medicine.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0d9488/ffffff?text=Dr.+Mohamed+Omar';" alt="Dr. Mohamed Omar" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Mohamed Omar</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Assistant Professor - Internal Medicine</p>
+                    <p class="text-[10px] text-slate-500">Chronic Care</p>
+                </div>
+            </div>
+
+            <!-- 9: Dr. Solomon Wube - Pediatrics -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="pediatrics">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Solomon%20Wube%20Pediatrics%20And%20Neonatal%20Surgeon.png" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0284c7/ffffff?text=Dr.+Solomon+Wube';" alt="Dr. Solomon Wube" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Solomon Wube</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Pediatrics & Neonatal Surgeon</p>
+                    <p class="text-[10px] text-slate-500">Surgery</p>
+                </div>
+            </div>
+
+            <!-- 10: Dr. Abdifatah Tahir - Internal Medicine -->
+            <div class="spec-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-200 group" data-category="internal-medicine">
+                <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Abdifatah%20Tahir%20Internist.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/0d9488/ffffff?text=Dr.+Abdifatah+Tahir';" alt="Dr. Abdifatah Tahir" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                        <button onclick="openBookingModal()" class="w-full bg-white text-slate-900 font-bold py-2 rounded-xl text-xs shadow">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="font-bold text-slate-900 text-sm">Dr. Abdifatah Tahir</h3>
+                    <p class="text-[11px] text-medical-primary font-semibold uppercase tracking-wider mb-1">Internist</p>
+                    <p class="text-[10px] text-slate-500">Internal Medicine</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MOBILE VIEW (Larger Images) ===== -->
+        <div class="md:hidden space-y-8">
+            <div>
+                <div class="border-b border-slate-200 pb-2 mb-4">
+                    <h3 class="font-bold text-medical-primary text-sm uppercase tracking-wider">Our Specialists</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Mobile Card 1 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Abdishakur%20Abdirasaq%20Gynecology%20And%20Obsterics%20Specialist.png" alt="Dr. Abdishakur" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Abdishakur Abdirasaq</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Gynecology</p>
+                    </div>
+                    <!-- Mobile Card 2 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Ahmed%20Abdikerin%20Pediatrics%20And%20Child%20Health%20Specialist.png" alt="Dr. Ahmed Abdikerin" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Ahmed Abdikerin</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Pediatrics</p>
+                    </div>
+                    <!-- Mobile Card 3 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Ahmednasir%20Abdi%20Internal%20Medicine%20Specialist.png" alt="Dr. Ahmednasir Abdi" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Ahmednasir Abdi</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
+                    </div>
+                    <!-- Mobile Card 4 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Fardowsa%20Abdulahi%20Assistant%20Professor%20Of%20Gynecology%20And%20Obsterics.png" alt="Dr. Fardowsa Abdulahi" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Fardowsa Abdulahi</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Gynecology</p>
+                    </div>
+                    <!-- Mobile Card 5 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Girma%20Moges%20MD%20Plastic%20And%20Reconstructive%20Surgeon.png" alt="Dr. Girma Moges" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Girma Moges MD</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Plastic Surgery</p>
+                    </div>
+                    <!-- Mobile Card 6 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Abdiihaye%20Internal%20Medicine%20Specialist.png" alt="Dr. Mohamed Abdiihaye" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Abdiihaye</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
+                    </div>
+                    <!-- Mobile Card 7 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Abdirahman%20Pediatrics%20And%20Child%20Health%20Specialist.png" alt="Dr. Mohamed Abdirahman" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Abdirahman</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Pediatrics</p>
+                    </div>
+                    <!-- Mobile Card 8 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Mohamed%20Omar%20Assistant%20Professor%20Of%20Internal%20Medicine.png" alt="Dr. Mohamed Omar" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Omar</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
+                    </div>
+                    <!-- Mobile Card 9 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Solomon%20Wube%20Pediatrics%20And%20Neonatal%20Surgeon.png" alt="Dr. Solomon Wube" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Solomon Wube</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Pediatric Surgery</p>
+                    </div>
+                    <!-- Mobile Card 10 -->
+                    <div onclick="openBookingModal()" class="bg-white rounded-2xl overflow-hidden border border-slate-200 p-3 flex flex-col items-center text-center shadow-xs col-span-2 max-w-[200px] mx-auto">
+                        <div class="w-28 h-28 rounded-xl overflow-hidden mb-2 bg-slate-100">
+                            <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/Doctors%20Images/Dr.%20Abdifatah%20Tahir%20Internist.jpg" alt="Dr. Abdifatah Tahir" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Abdifatah Tahir</h4>
+                        <p class="text-[10px] text-medical-primary font-medium">Internist</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- If you have more categories, they go here – but I see only this one in your original file -->
-</div>
-                    
-                    <div class="border-b border-slate-200 pb-2 mb-4"><h3 class="font-bold text-medical-primary text-sm uppercase tracking-wider">Internal Medicine</h3></div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-0ai-2w0g0B8JVALQp3K8eFGDCeI83Pru3f2CAZMTQ&s=10" alt="Dr. Fatima" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Fatima Hassan</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Internal Medicine</p>
-                        </div>
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ27EhKVotCvokwOkU09_tueECsksa98n33XIsGrWEGvA&s=10" alt="Dr. Mohamed" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mohamed Ali</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Cardiology</p>
-                        </div>
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs col-span-2">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvg4gXYnbfWtU1iw4rGYM0xqxSkUl9r_wxIhiG42wTVA&s=10" alt="Dr. Mahad" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Mahad Farah</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Neurology</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="border-b border-slate-200 pb-2 mb-4"><h3 class="font-bold text-medical-primary text-sm uppercase tracking-wider">Pediatrics</h3></div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaPSQ5HaUEtCaU2iePUcLNAkBoSB0c62Mp4EGkyG_K7w&s=10" alt="Dr. Ibrahim" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Ibrahim Yusuf</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Pediatrics</p>
-                        </div>
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtTxZZIFE78yll0i3a6q-ZGVgR5SIUeySf9uXaxylFAQ&s=10" alt="Dr. Hodan" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Hodan Warsame</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Gynecology</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="border-b border-slate-200 pb-2 mb-4"><h3 class="font-bold text-medical-primary text-sm uppercase tracking-wider">Surgery & Orthopedics</h3></div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNWDgE3dHUzy8Ak4ra4YdTV6hK288xK6zInm2I6PwwQ&s=10" alt="Dr. Samira" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Samira Abdi</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Surgery</p>
-                        </div>
-                        <div onclick="openBookingModal()" class="bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 p-2.5 flex flex-col items-center text-center shadow-xs">
-                            <div class="w-16 h-16 rounded-xl overflow-hidden mb-2 bg-slate-100"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRryw-KclIIgZVTMNWLsxIPFwpFMEhpdLSssI14Xnh82w&s=10" alt="Dr. Liban" class="w-full h-full object-cover"></div>
-                            <h4 class="font-bold text-slate-900 text-xs line-clamp-1">Dr. Liban Jama</h4>
-                            <p class="text-[10px] text-medical-primary font-medium">Ophthalmology</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+</section>
     <!-- SERVICES -->
     <section id="services" class="w-full bg-teal-50/50 py-16 lg:py-24 border-b border-slate-200 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
