@@ -1200,9 +1200,21 @@
             <span class="text-medical-accent font-bold uppercase tracking-widest text-xs bg-medical-900/50 px-3.5 py-1.5 rounded-full border border-medical-500/30" data-i18n="our_story_badge">Our Story</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-i18n="story_heading">Building Trust & Quality Healthcare in Jijiga</h2>
             <p class="text-slate-300 font-light leading-relaxed text-sm sm:text-base" data-i18n="story_desc">At NEJASH HOSPITAL, our journey began with a simple vision: to provide accessible, high-standard private medical care with genuine human compassion. Watch our story to learn more about our commitment to the community.</p>
-            <div class="flex items-center space-x-4 pt-2">
-                <button onclick="openBookingModal()" class="bg-medical-primary hover:bg-medical-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm"><span data-i18n="book_now">Book Appointment</span></button>
-                <a href="https://wa.me/2519000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm flex items-center"><i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="whatsapp_us">WhatsApp Us</span></a>
+            
+            <!-- Button row with nurse image pointing toward buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+                <!-- Nurse Image -->
+                <div class="flex-shrink-0">
+                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/services_images/Gemini_Generated_Image_5gqt4b5gqt4b5gqt.jfif" 
+                         alt="Nurse" 
+                         class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-medical-primary/30 shadow-lg">
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex flex-wrap items-center gap-3">
+                    <button onclick="openBookingModal()" class="bg-medical-primary hover:bg-medical-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm"><span data-i18n="book_now">Book Appointment</span></button>
+                    <a href="https://wa.me/2519000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm flex items-center"><i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="whatsapp_us">WhatsApp Us</span></a>
+                </div>
             </div>
         </div>
         <div class="lg:col-span-6 flex justify-center">
@@ -1211,7 +1223,7 @@
                 <div class="absolute top-0 left-0 w-full h-full">
                     <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F26932073803114884%2F&show_text=false&width=267&t=0" class="w-full h-full" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
                 </div>
-                <!-- Caption Overlay - moved up to bottom-16 so it doesn't cover video controls -->
+                <!-- Caption Overlay -->
                 <div class="absolute bottom-16 left-4 right-4 bg-slate-900/80 backdrop-blur-md p-3 rounded-xl text-xs text-slate-300 flex justify-between items-center" style="z-index: 10;">
                     <span data-i18n="video_caption">NEJASH HOSPITAL Introduction & Facility Overview</span>
                     <span class="text-medical-accent font-bold">2:45 min</span>
