@@ -1244,19 +1244,20 @@
             
             <!-- Button row with nurse image pointing toward buttons -->
             <div class="flex flex-wrap items-center gap-4 pt-2">
-                <!-- Nurse Image -->
-                <div class="flex-shrink-0">
-                    <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/services_images/Gemini_Generated_Image_5gqt4b5gqt4b5gqt.jfif" 
-                         alt="Nurse" 
-                         class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-medical-primary/30 shadow-lg">
-                </div>
-                
-                <!-- Buttons -->
-                <div class="flex flex-wrap items-center gap-3">
-                    <button onclick="openBookingModal()" class="bg-medical-primary hover:bg-medical-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm"><span data-i18n="book_now">Book Appointment</span></button>
-                    <a href="https://wa.me/2519000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm flex items-center"><i class="fa-brands fa-whatsapp mr-2"></i> <span data-i18n="whatsapp_us">WhatsApp Us</span></a>
-                </div>
-            </div>
+                <div class="flex items-center gap-3 pt-2">
+    <!-- Nurse Image (unchanged) -->
+    <div class="flex-shrink-0">
+        <img src="https://cdn.jsdelivr.net/gh/africantycoons1-spec/NEJASH-HOSPITAL@main/services_images/Gemini_Generated_Image_5gqt4b5gqt4b5gqt.jfif" 
+             alt="Nurse" 
+             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-medical-primary/30 shadow-lg">
+    </div>
+    
+    <!-- Buttons (smaller on mobile) -->
+    <div class="flex flex-nowrap items-center gap-1 sm:gap-2 md:gap-3">
+        <button onclick="openBookingModal()" class="bg-medical-primary hover:bg-medical-600 text-white font-bold px-2.5 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3.5 rounded-xl shadow-lg transition text-[10px] sm:text-xs md:text-sm whitespace-nowrap"><span data-i18n="book_now">Book Appointment</span></button>
+        <a href="https://wa.me/2519000000" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-2.5 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3.5 rounded-xl shadow-lg transition text-[10px] sm:text-xs md:text-sm whitespace-nowrap flex items-center"><i class="fa-brands fa-whatsapp mr-1 sm:mr-2"></i> <span data-i18n="whatsapp_us">WhatsApp Us</span></a>
+    </div>
+</div>
         </div>
         <div class="lg:col-span-6 flex justify-center">
             <div class="relative aspect-[9/16] max-h-[600px] w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800">
