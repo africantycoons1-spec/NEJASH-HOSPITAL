@@ -1648,6 +1648,32 @@
             }
         });
 
+      // ===== MOBILE LANGUAGE CYCLE (Globe Icon Only) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const langBtn = document.getElementById('lang-toggle-btn');
+    if (!langBtn) return;
+
+    function cycleLanguage() {
+        const languages = ['en', 'am', 'so'];
+        const currentIndex = languages.indexOf(currentLang);
+        const nextIndex = (currentIndex + 1) % languages.length;
+        const nextLang = languages[nextIndex];
+        setLanguage(nextLang);
+    }
+
+    langBtn.addEventListener('click', function(e) {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) {
+            e.preventDefault();
+            e.stopPropagation();
+            cycleLanguage();
+            const dropdown = document.getElementById('lang-dropdown');
+            if (dropdown && !dropdown.classList.contains('hidden')) {
+                dropdown.classList.add('hidden');
+            }
+        }
+    });
+});
         // Mobile menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
