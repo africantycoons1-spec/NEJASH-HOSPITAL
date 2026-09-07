@@ -1634,33 +1634,23 @@ function setLanguage(lang) {
     const labels = { en: 'English', am: 'አማርኛ', so: 'Af-Somali' };
     const shortLabels = { en: 'EN', am: 'AM', so: 'SO' };
     
-    // Update globe icon label (exists on both mobile and desktop)
+    // Update globe icon
     const langLabel = document.getElementById('current-lang-label');
     if (langLabel) {
         langLabel.textContent = labels[lang];
     }
     
-    // Update mobile menu label (only exists in mobile accordion)
+    // Update mobile menu label
     const mobileLabel = document.getElementById('mobile-lang-label');
     if (mobileLabel) {
         mobileLabel.textContent = shortLabels[lang];
     }
     
-    // Close dropdown
     const dropdown = document.getElementById('lang-dropdown');
     if (dropdown) {
         dropdown.classList.add('hidden');
     }
 }
-        function toggleLangDropdown() {
-            document.getElementById('lang-dropdown').classList.toggle('hidden');
-        }
-        window.addEventListener('click', (e) => {
-            if (!e.target.closest('button[onclick="toggleLangDropdown()"]')) {
-                const dd = document.getElementById('lang-dropdown');
-                if (dd && !dd.classList.contains('hidden')) dd.classList.add('hidden');
-            }
-        });
 
     // ===== MOBILE LANGUAGE CYCLE (Globe Icon Only) =====
 document.addEventListener('DOMContentLoaded', function() {
