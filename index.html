@@ -1668,12 +1668,24 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!langBtn) return;
 
     function cycleLanguage() {
-        const languages = ['en', 'am', 'so'];
-        const currentIndex = languages.indexOf(currentLang);
-        const nextIndex = (currentIndex + 1) % languages.length;
-        const nextLang = languages[nextIndex];
-        setLanguage(nextLang);
+    const languages = ['en', 'am', 'so'];
+    const currentIndex = languages.indexOf(currentLang);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    const nextLang = languages[nextIndex];
+    
+    // Update the page content
+    setLanguage(nextLang);
+    
+    // FORCE UPDATE the globe icon label (direct update)
+    const labels = { en: 'English', am: 'አማርኛ', so: 'Af-Somali' };
+    const labelEl = document.getElementById('current-lang-label');
+    if (labelEl) {
+        labelEl.textContent = labels[nextLang];
+        console.log('Label updated to:', labels[nextLang]); // For debugging
+    } else {
+        console.log('Element not found!');
     }
+}
 
     langBtn.addEventListener('click', function(e) {
         const isMobile = window.innerWidth < 768;
