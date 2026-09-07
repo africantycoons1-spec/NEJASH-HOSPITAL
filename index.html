@@ -537,10 +537,11 @@
             </div>
 
             <div class="lg:hidden flex items-center space-x-2">
-                <button onclick="toggleLangDropdown()" class="bg-slate-100 text-slate-700 px-3 py-2 rounded-xl text-xs font-bold flex items-center space-x-1">
-                    <i class="fa-solid fa-globe text-medical-primary"></i>
-                    <span id="mobile-lang-label">EN</span>
-                </button>
+                <button id="lang-toggle-btn" onclick="toggleLangDropdown()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-3.5 py-2.5 rounded-xl text-sm flex items-center space-x-1.5 transition">
+    <i class="fa-solid fa-globe text-medical-primary"></i>
+    <span id="current-lang-label">English</span>
+    <i class="fa-solid fa-chevron-down text-xs text-slate-400 hidden md:inline"></i>
+</button>
                 <button id="mobile-menu-btn" class="text-slate-700 focus:outline-none text-xl p-2">
                     <i class="fa-solid fa-bars"></i>
                 </button>
