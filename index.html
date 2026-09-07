@@ -1622,9 +1622,9 @@
             }
         };
 
-        let currentLang = 'en';
+    let currentLang = 'en';
 
-        function setLanguage(lang) {
+function setLanguage(lang) {
     currentLang = lang;
     const dict = translations[lang] || translations['en'];
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -1633,13 +1633,25 @@
     });
     const labels = { en: 'English', am: 'አማርኛ', so: 'Af-Somali' };
     const shortLabels = { en: 'EN', am: 'AM', so: 'SO' };
-    // This updates the globe icon text (full name)
-    document.getElementById('current-lang-label').textContent = labels[lang];
-    // This updates the mobile menu language label (short code)
-    document.getElementById('mobile-lang-label').textContent = shortLabels[lang];
-    document.getElementById('lang-dropdown').classList.add('hidden');
+    
+    // Update globe icon label (exists on both mobile and desktop)
+    const langLabel = document.getElementById('current-lang-label');
+    if (langLabel) {
+        langLabel.textContent = labels[lang];
+    }
+    
+    // Update mobile menu label (only exists in mobile accordion)
+    const mobileLabel = document.getElementById('mobile-lang-label');
+    if (mobileLabel) {
+        mobileLabel.textContent = shortLabels[lang];
+    }
+    
+    // Close dropdown
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.add('hidden');
+    }
 }
-
         function toggleLangDropdown() {
             document.getElementById('lang-dropdown').classList.toggle('hidden');
         }
